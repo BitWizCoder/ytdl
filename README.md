@@ -20,10 +20,6 @@ Before using this application, ensure you have the following installed:
     ```bash
     sudo apt install ffmpeg
     ```
-  - **macOS** (using Homebrew): 
-    ```bash
-    brew install ffmpeg
-    ```
   - **Windows**: Download the FFmpeg binaries from [FFmpeg's official website](https://ffmpeg.org/download.html) and add the path to your system's `PATH` variable.
 
 ## Installation
@@ -31,7 +27,7 @@ Before using this application, ensure you have the following installed:
 You can install this package via pip:
 
 ```bash
-pip install your_package_name
+pip install grabyt --user
 ```
 
 ## Usage
@@ -39,7 +35,7 @@ pip install your_package_name
 To use the Video Downloader CLI, simply run
 
 ```bash
-ytdl
+grabyt
 ``` 
 
 You will be prompted to enter the video URL and select the desired format. The available options are:
@@ -53,7 +49,7 @@ You will be prompted to enter the video URL and select the desired format. The a
 Run the application:
 
 ```bash
-ytdl
+grabyt
 ```
 Enter the video URL when prompted.
 Select the desired resolution or audio option.
