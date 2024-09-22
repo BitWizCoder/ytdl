@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "grabyt"
-version = "0.1.3"
+version = "0.1.5"
 description = "A CLI app to download videos using yt-dlp"
 authors = ["Muhammad <mhmdnoman01@gmail.com>"]
 readme = "README.md"
