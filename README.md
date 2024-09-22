@@ -18,7 +18,7 @@ Before using this application, ensure you have the following installed:
 - **FFmpeg** (used for audio extraction)
   - **Ubuntu/Debian**: 
     ```bash
-    sudo apt install ffmpeg
+    $ sudo apt install ffmpeg
     ```
   - **Windows**: Download the FFmpeg binaries from [FFmpeg's official website](https://ffmpeg.org/download.html) and add the path to your system's `PATH` variable.
 
@@ -27,7 +27,7 @@ Before using this application, ensure you have the following installed:
 You can install this package via pip:
 
 ```bash
-pip install grabyt --user
+$ pip install grabyt --user
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ pip install grabyt --user
 To use the Video Downloader CLI, simply run
 
 ```bash
-grabyt
+$ grabyt
 ``` 
 
 You will be prompted to enter the video URL and select the desired format. The available options are:
@@ -49,7 +49,7 @@ You will be prompted to enter the video URL and select the desired format. The a
 Run the application:
 
 ```bash
-grabyt
+$ grabyt
 ```
 Enter the video URL when prompted.
 Select the desired resolution or audio option.
