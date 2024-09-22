@@ -29,5 +29,5 @@ jobs:
 
       - name: Publish to PyPI
         env:
-          POETRY_PYPI_TOKEN_PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}  # Use the PyPI token stored in GitHub Secrets
+          POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_TOKEN }}  # Use the PyPI token stored in GitHub Secrets
         run: poetry publish --build
