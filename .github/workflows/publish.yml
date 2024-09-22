@@ -1,31 +1,46 @@
-name: Publish Python Package
+ame: Release
 
 on:
   push:
     tags:
-      - 'v*'  # Trigger when a tag with version is pushed (e.g., v1.0.0)
+      - '*.*.*'
+
+permissions:
+  contents: read
 
 jobs:
-  build:
+  pypi-publish:
+    name: Upload release to PyPI
     runs-on: ubuntu-latest
-
+    environment:
+      name: pypi
+      url: https://pypi.org/project/grabyt/
+    permissions:
+      id-token: write
     steps:
-      - name: Check out the code
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'  # Use the desired Python version
+          python-version: "3.10"
 
       - name: Install Poetry
-        run: pip install poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python - -y
+
+      - name: Update PATH
+        run: echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Update Poetry configuration
+        run: poetry config virtualenvs.create false
 
       - name: Install dependencies
-        run: poetry install
+        run: poetry install --sync --no-interaction
 
-      - name: Build the package
+      - name: Package project
         run: poetry build
 
-      - name: Publish to PyPI
-        run: poetry publish --build
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
