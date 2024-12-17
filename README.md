@@ -65,6 +65,5 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 ## Contact
 For questions or feedback, feel free to reach out:
 - Author: Muhammad Noman
-- Email: mhmdnoman01@gmail.com
 - X: https://x.com/BitWizCoder 
 
